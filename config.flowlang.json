@@ -1,0 +1,9 @@
+{
+    "name": "module",
+    "version": "1.0.0",
+    "entry": "src/main.flow",
+    "authors": [
+        "FlowLang Team"
+    ],
+    "type_required": false
+}
