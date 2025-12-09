@@ -1,6 +1,0 @@
-{
-    "name": "mystic-math",
-    "version": "1.0.0",
-    "entry": "src/lib.flow",
-    "type_required": false
-}
