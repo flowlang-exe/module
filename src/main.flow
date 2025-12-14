@@ -1,0 +1,32 @@
+-- FlowLang Test Module
+-- A module that depends on utils
+
+circle utils from "pkg:utils"
+
+-- Re-export utils functions
+export cast Spell greet(name) -> Silk {
+    return "Hello, " + utils.capitalize(name) + "! 👋"
+}
+
+export cast Spell repeat_greet(name, times) -> Silk {
+    let greeting = greet(name)
+    return utils.repeat(greeting + " ", times)
+}
+
+export cast Spell add(a, b) -> Ember {
+    return a + b
+}
+
+export cast Spell multiply(a, b) -> Ember {
+    return a * b
+}
+
+export cast Spell clamped_add(a, b, min, max) -> Ember {
+    return utils.clamp(a + b, min, max)
+}
+
+export seal VERSION = "1.0.0"
+export seal NAME = "FlowLang Test Module"
+
+shout("📦 Module loaded: " + NAME + " v" + VERSION)
+shout("   (depends on: " + utils.NAME + " v" + utils.VERSION + ")")
